@@ -1,6 +1,7 @@
 import express from "express";
 const app = express();
 const port = 3000;
+const cors = require("cors");
 
 // Mock data for clinics, doctors, and users
 const clinicsData = [
@@ -109,6 +110,8 @@ const clinicsData = [
 const doctorsData = [321];
 
 const usersData = [111];
+
+app.use(cors());
 
 app.get("/clinics", (req, res) => {
   res.json(clinicsData);
