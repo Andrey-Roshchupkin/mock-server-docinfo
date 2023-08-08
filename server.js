@@ -1,7 +1,7 @@
 import express from "express";
 const app = express();
 const port = 3000;
-const cors = require("cors");
+import cors from "cors";
 
 // Mock data for clinics, doctors, and users
 const clinicsData = [
