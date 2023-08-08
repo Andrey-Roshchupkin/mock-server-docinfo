@@ -10,7 +10,7 @@ const usersData = [111];
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.status(200);
+  res.json("I'm alive");
 });
 
 app.get("/clinics", (req, res) => {
