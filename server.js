@@ -2,8 +2,8 @@ import express from "express";
 const app = express();
 const port = 3000;
 import cors from "cors";
-import { clinics } from "./clinics";
-import { doctors } from "./doctors";
+import { clinics } from "./clinics.js";
+import { doctors } from "./doctors.js";
 
 const usersData = [111];
 
