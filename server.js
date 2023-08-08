@@ -9,6 +9,10 @@ const usersData = [111];
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.status(200);
+});
+
 app.get("/clinics", (req, res) => {
   res.json(clinics);
 });
