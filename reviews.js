@@ -1,6 +1,6 @@
 export const clinicsReviews = [
   {
-    clinic_id: "CLINIC001",
+    clinic_id: 0,
     reviews: [
       {
         patient_id: "PATIENT001",
@@ -23,7 +23,7 @@ export const clinicsReviews = [
     ],
   },
   {
-    clinic_id: "CLINIC002",
+    clinic_id: 1,
     reviews: [
       {
         patient_id: "PATIENT003",
@@ -37,7 +37,7 @@ export const clinicsReviews = [
     ],
   },
   {
-    clinic_id: "CLINIC003",
+    clinic_id: 2,
     reviews: [
       {
         patient_id: "PATIENT004",
