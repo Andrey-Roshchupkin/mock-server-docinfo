@@ -4,6 +4,7 @@ const port = 3000;
 import cors from "cors";
 import { clinics } from "./clinics.js";
 import { doctors } from "./doctors.js";
+import { clinicsreviews } from "./reviews.js";
 
 const usersData = [111];
 
@@ -23,6 +24,10 @@ app.get("/doctors", (req, res) => {
 
 app.get("/users", (req, res) => {
   res.json(usersData);
+});
+
+app.get("/clinicsreviews", (req, res) => {
+  res.json(clinicsreviews);
 });
 
 app.listen(port, () => {
