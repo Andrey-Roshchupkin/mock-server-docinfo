@@ -1,1 +1,1 @@
-export const doctorsReviews = [];
+export const clinicsReviews = [];
