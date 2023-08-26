@@ -9,7 +9,6 @@ import { requests } from "./requests.js";
 import { users } from "./users.js";
 
 app.use(cors());
-app.use(express.json());
 
 app.get("/", (req, res) => {
   res.json("I'm alive");
@@ -40,7 +39,7 @@ app.get("/requests", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
-  const { login, password } = req.body;
+  const { login, password } = JSON.parse(req.body);
   const user = users.find((user) => (user.login = login));
   user.password == password
     ? res.status(200).json(user.token)
