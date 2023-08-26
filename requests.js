@@ -3,6 +3,7 @@ export const requests = [
     clinic_id: 0,
     requests: [
       {
+        request_id: 34534,
         patient_id: "PATIENT001",
         is_callback_needed: true,
         patient_name: "Joe Dow",
@@ -16,7 +17,8 @@ export const requests = [
         clinics_commentary: "",
       },
       {
-        patient_id: "PATIENT001",
+        request_id: 34537,
+        patient_id: "PATIENT002",
         is_callback_needed: true,
         patient_name: "Joe Dow",
         phone_number: "+374-41-720001",
