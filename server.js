@@ -44,7 +44,7 @@ app.post("/login", (req, res) => {
   const { login, password } = req.body;
   const user = users.find((user) => (user.login = login));
   user.password == password
-    ? res.status(200).json(user.token)
+    ? res.status(200).json(user)
     : res.status(400).send("Invalid Credentials");
 });
 
