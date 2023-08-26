@@ -4,7 +4,7 @@ export const requests = [
     requests: [
       {
         patient_id: "PATIENT001",
-        is_callback_nedded: true,
+        is_callback_needed: true,
         patient_name: "Joe Dow",
         phone_number: "+374-41-720001",
         date_of_request: "2023-08-16",
@@ -17,7 +17,7 @@ export const requests = [
       },
       {
         patient_id: "PATIENT001",
-        is_callback_nedded: true,
+        is_callback_needed: true,
         patient_name: "Joe Dow",
         phone_number: "+374-41-720001",
         date_of_request: "2023-08-17",
