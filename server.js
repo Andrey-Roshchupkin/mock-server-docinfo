@@ -41,7 +41,7 @@ app.get("/requests", (req, res) => {
 
 app.post("/login", (req, res) => {
   console.log(req.body);
-  const { login, password } = JSON.parse(req.body);
+  const { login, password } = req.body;
   const user = users.find((user) => (user.login = login));
   user.password == password
     ? res.status(200).json(user.token)
