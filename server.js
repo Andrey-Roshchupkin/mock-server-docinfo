@@ -6,6 +6,7 @@ import { clinics } from "./clinics.js";
 import { doctors } from "./doctors.js";
 import { clinicsReviews, doctorsReviews } from "./reviews.js";
 import { requests } from "./requests.js";
+import { users } from "./users.js";
 
 app.use(cors());
 
@@ -35,6 +36,14 @@ app.get("/doctorsreviews", (req, res) => {
 
 app.get("/requests", (req, res) => {
   res.json(requests);
+});
+
+app.post("/login", (req, res) => {
+  const { login, password } = req.body;
+  const user = users.find((user) => (user.login = login));
+  user.password == password
+    ? res.status(200).json(user.token)
+    : res.status(400).send("Invalid Credentials");
 });
 
 app.listen(port, () => {
