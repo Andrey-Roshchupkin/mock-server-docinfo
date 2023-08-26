@@ -40,7 +40,7 @@ app.get("/requests", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
-  console.log(req);
+  console.log(req.body);
   const { login, password } = JSON.parse(req.body);
   const user = users.find((user) => (user.login = login));
   user.password == password
