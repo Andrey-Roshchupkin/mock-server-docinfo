@@ -5,8 +5,7 @@ import cors from "cors";
 import { clinics } from "./clinics.js";
 import { doctors } from "./doctors.js";
 import { clinicsReviews, doctorsReviews } from "./reviews.js";
-
-const usersData = [111];
+import { requests } from "./requests.js";
 
 app.use(cors());
 
@@ -32,6 +31,10 @@ app.get("/clinicsreviews", (req, res) => {
 
 app.get("/doctorsreviews", (req, res) => {
   res.json(doctorsReviews);
+});
+
+app.get("/requests", (req, res) => {
+  res.json(requests);
 });
 
 app.listen(port, () => {
