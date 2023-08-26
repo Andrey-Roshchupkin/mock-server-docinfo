@@ -9,6 +9,7 @@ import { requests } from "./requests.js";
 import { users } from "./users.js";
 
 app.use(cors());
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.json("I'm alive");
