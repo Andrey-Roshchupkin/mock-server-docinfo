@@ -21,7 +21,12 @@ app.get("/clinics", (req, res) => {
 });
 
 app.get("/clinics/:id", (req, res) => {
-  getByID(req, clinics);
+  const data = getByID(req, clinics);
+  if (data) {
+    res.json(data);
+  } else {
+    res.status(404).json("this ID not found");
+  }
 });
 
 app.get("/doctors", (req, res) => {
@@ -29,15 +34,25 @@ app.get("/doctors", (req, res) => {
 });
 
 app.get("/doctors/:id", (req, res) => {
-  getByID(req, doctors);
+  const data = getByID(req, doctors);
+  if (data) {
+    res.json(data);
+  } else {
+    res.status(404).json("this ID not found");
+  }
 });
 
 app.get("/users", (req, res) => {
-  res.json(usersData);
+  res.json(users);
 });
 
 app.get("/users/:id", (req, res) => {
-  getByID(req, usersData);
+  const data = getByID(req, users);
+  if (data) {
+    res.json(data);
+  } else {
+    res.status(404).json("this ID not found");
+  }
 });
 
 app.get("/clinicsreviews", (req, res) => {
