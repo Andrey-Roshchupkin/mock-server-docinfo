@@ -1,4 +1,4 @@
-function getByID(req, data) {
+export function getByID(req, data) {
   const id = parseInt(req.params.id);
   const foundData = data.find((obj) => obj.id === id);
 
@@ -8,5 +8,3 @@ function getByID(req, data) {
     res.status(404).json("this ID not found");
   }
 }
-
-module.exports = { getByID };
