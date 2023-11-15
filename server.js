@@ -7,6 +7,7 @@ import { doctors } from "./doctors.js";
 import { clinicsReviews, doctorsReviews } from "./reviews.js";
 import { requests } from "./requests.js";
 import { users } from "./users.js";
+import { getByID } from "./utils.js";
 
 app.use(cors());
 app.use(express.json());
@@ -19,12 +20,24 @@ app.get("/clinics", (req, res) => {
   res.json(clinics);
 });
 
+app.get("/clinics/:id", (req, res) => {
+  getByID(req, clinics);
+});
+
 app.get("/doctors", (req, res) => {
   res.json(doctors);
 });
 
+app.get("/doctors/:id", (req, res) => {
+  getByID(req, doctors);
+});
+
 app.get("/users", (req, res) => {
   res.json(usersData);
+});
+
+app.get("/users/:id", (req, res) => {
+  getByID(req, usersData);
 });
 
 app.get("/clinicsreviews", (req, res) => {
